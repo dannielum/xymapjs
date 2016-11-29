@@ -1,18 +1,26 @@
 import React, {Component} from 'react';
-import logo from './assets/images/logo.svg';
+import XYMap from './components/XYMap';
+import TileList from './components/TileList';
+import TileProperties from './components/TileProperties';
 import './assets/styles/app.css';
+import './assets/styles/index.css';
 
 class App extends Component {
   render() {
     return (
       <div className="app">
         <div className="app-header">
-          <img src={ logo } className="app-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          XY Map
         </div>
-        <p className="app-intro">
-          To get started, edit <code>src/app.js</code> and save to reload.
-        </p>
+        <div className="app-body">
+          <div className="map-panel">
+            <XYMap />
+          </div>
+          <div className="side-panel">
+            <TileList />
+            <TileProperties />
+          </div>
+        </div>
       </div>
     );
   }
