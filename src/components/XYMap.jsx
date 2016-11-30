@@ -1,11 +1,12 @@
-import React, {PropTypes, Component} from 'react';
+import React, { PropTypes, Component } from 'react';
+import { Panel } from 'react-bootstrap';
 
 class XYMap extends Component {
   render() {
     return (
-      <div className="xymap-container">
-        Map
-      </div>
+      <Panel header={'Map name'} bsStyle="info">
+        map canvas
+      </Panel>
     );
   }
 }

@@ -37,7 +37,7 @@
     "react/jsx-wrap-multilines": 2, // Prevent missing parentheses around multilines JSX (fixable)
     "react/jsx-boolean-value": 2, // Enforce boolean attributes notation in JSX (fixable)
     "react/jsx-closing-bracket-location": [2, "after-props"], // Validate closing bracket location in JSX (fixable)
-    "react/jsx-curly-spacing": [2, "always"], // Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
+    "react/jsx-curly-spacing": [2, "never"], // Enforce or disallow spaces inside of curly braces in JSX attributes (fixable)
     "react/jsx-equals-spacing": 2, // Enforce or disallow spaces around equal signs in JSX attributes (fixable)
     "react/jsx-indent": [2, 2], // Validate JSX indentation
     // "react/jsx-indent-props": 0, // Validate props indentation in JSX (fixable)
@@ -118,7 +118,7 @@
     "no-unneeded-ternary": [2, {"defaultAssignment": false}], // disallow ternary operators when simpler alternatives exist
     "no-whitespace-before-property": 2, // disallow whitespace before properties (fixable)
     // "object-curly-newline": 2, // enforce consistent line breaks inside braces (fixable)
-    "object-curly-spacing": 2, // enforce consistent spacing inside braces (fixable)
+    "object-curly-spacing": [2, "always"], // enforce consistent spacing inside braces (fixable)
     "object-property-newline": [2, {"allowMultiplePropertiesPerLine": true}], // enforce placing object properties on separate lines
     "one-var-declaration-per-line": [2, "always"], // require or disallow newlines around `var` declarations
     "operator-assignment": 2, // require or disallow assignment operator shorthand where possible
