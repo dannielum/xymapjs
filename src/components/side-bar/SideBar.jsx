@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import TileList from './TileList';
 import TileProperties from './TileProperties';
+import { loadTile } from '../../actions/tile';
 
 class SideBar extends Component {
   render() {
@@ -13,4 +15,8 @@ class SideBar extends Component {
   }
 }
 
-export default SideBar;
+const mapStateToProps = (state) => ({
+  tiles: loadTile(state)
+});
+
+export default connect(mapStateToProps)(SideBar);
