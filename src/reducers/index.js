@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import { loadMapReducer } from './map';
-import { loadAssetsReducer } from './assets';
-import { loadTileReducer } from './tile';
+import { mapReducer } from './map';
+import { assetsReducer } from './assets';
+import { tileReducer } from './tile';
 
 const rootReducer = combineReducers({
-  map: loadMapReducer,
-  assets: loadAssetsReducer,
-  selectedTile: loadTileReducer
+  map: mapReducer,
+  assets: assetsReducer,
+  selectedTile: tileReducer
 });
 
 export default rootReducer;

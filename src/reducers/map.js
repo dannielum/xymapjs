@@ -1,9 +1,11 @@
-import { LOAD_MAP } from '../constants/action-types';
+import R from 'ramda';
+import { NEW_MAP, LOAD_MAP } from '../constants/action-types';
 
-export function loadMapReducer(state = null, action) {
+export function mapReducer(state = null, action) {
   switch (action.type) {
+    case NEW_MAP:
     case LOAD_MAP:
-      return Object.assign({}, state, action.payload.map);
+      return R.mergeAll(action.payload, state);
     default:
       return state;
   }

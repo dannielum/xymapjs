@@ -1,11 +1,9 @@
-import { LOAD_TILE } from '../constants/action-types';
+import { SELECT_TILE } from '../constants/action-types';
 
-export function loadTile() {
+export function tileSelect(tile) {
   return {
-    type: LOAD_TILE,
-    payload: {
-      tileId: 1
-    }
+    type: SELECT_TILE,
+    payload: tile
   };
 }
 
@@ -14,6 +12,6 @@ export function saveTile() {
 }
 
 export default {
-  loadTile,
+  tileSelect,
   saveTile
 };

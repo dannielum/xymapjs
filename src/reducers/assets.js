@@ -1,9 +1,10 @@
+import R from 'ramda';
 import { LOAD_ASSETS } from '../constants/action-types';
 
-export function loadAssetsReducer(state = {}, action) {
+export function assetsReducer(state = {}, action) {
   switch (action.type) {
     case LOAD_ASSETS:
-      return Object.assign({}, state, action.payload.assets);
+      return R.mergeAll(action.payload, state);
     default:
       return state;
   }
